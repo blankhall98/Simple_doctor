@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "{{url_for('static',filename='style.css')}}" rel="stylesheet">
+
+    <title>Dr. {{Doctor_information['lastname']}}</title>
+</head>
+<body>
+    <div id="banner">
+        <div id="language">
+        </div>
+        <div id="banner_main">
+            <div id="banner_logo">
+                <img src = "{{ url_for('static', filename='main_logo.png') }}" width = 100% height= auto>
+            </div>
+            <div id="banner_links">
+                <a href="#main_content" class="b_link">Contact and Location</a>
+                <a href="#secondary_content" class="b_link">About the Doctor</a>
+            </div>
+        </div>
+    </div>
+    <div id="main_content">
+        <div id="main_info" class="main_bubble">
+            <div class="mb_title">{{Section_titles['main_info']}}</div>
+            {% for key in Main_info %}
+                <h4>{{key}}</h4>
+                <ul>
+                {% for info in Main_info[key] %}
+                    <li>{{info}}</li>
+                {%endfor%}
+                </ul>
+            {%endfor%}
+        </div>
+        <div id="contact_info" class="main_bubble">
+            <div class="mb_title">{{Section_titles['contact_info']}}</div>
+            {% for office in Office %}
+                <div class="office_bubble">
+                    <div class="ob_title"><h3>{{office['name']}}</h3></div>
+                    <div class="ob_info">
+                        <div class="physical">
+                            <h4>Location</h4>
+                            <ul>
+                                <li><p>{{office['country']}} , {{office['city']}}</p></li>
+                                <li><p><strong>Adress: </strong>{{office['adress']}}</p></li>
+                                <li><p><strong>Reference: </strong>{{office['reference']}}</p></li>
+                            </ul>
+                            <h4>Contact</h4>
+                            <p>{{office['telephone']}}</p>
+                        </div>
+                        <div class="available">
+                            {%for day in office['available']%}
+                                <div class="day_bubble">
+                                    <p><strong>{{day}}</strong></p>
+                                    <p>{{office['available'][day]}}</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+    <div id="secondary_content" >
+        <div id="gallery" class="main_bubble">
+            <div class="mb_title">{{Section_titles['gallery']}}</div>
+        </div>
+        <div id="doctor_info" class="main_bubble">
+            <div class="mb_title">{{Section_titles['doctor_info']}}</div>
+        </div>
+    </div>
+    <div id="foot"></div>
+</body>
+</html>
