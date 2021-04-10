@@ -6,7 +6,7 @@ app.config.secret_key = "xxxxxxxxxx"
 
 Office = [
     {
-        'name': "Hospital Amerimed",
+        'name': "Torre Médica Hospital Amerimed",
         'country': 'México',
         'city': 'Cancún',
         'adress': 'AV. BONAMPAK MZA 01 LOTE 1 CONSULTORIO 104 PRIMER PISO  SM6A BENITO JUAREZ  CANCUN QROO',
@@ -20,7 +20,7 @@ Office = [
             'Saturday': '08:00-15:00',
             'Sunday': 'NA'
         },
-        'telephone': ['(044) 9988813408']
+        'telephone': ['(998) 8454383','(998) 8813408']
     },
     {
         'name': "CENTRO QUIROPRACTICO CASSAN",
@@ -37,7 +37,7 @@ Office = [
             'Saturday': 'NA',
             'Sunday': 'NA'
         },
-        'telephone': ['(044) 998 4891646', '(044) 998 3214400' ] 
+        'telephone': ['(998) 8454383','(998) 4891646', '(998) 3214400' ] 
     }
 ]
 
@@ -53,7 +53,9 @@ Doctor_information = {
     'lastname': "Blank",
     'telephone': '(044) 998 8454383',
     'university': 'Universidad Nacional Autónoma de México',
-    'specialities': ['Orthopedics','Trauma']
+    'specialities': ['Orthopedics','Trauma'],
+    'curriculum': 'Soy un  médico cirujano graduado de la facultad de medicina de la UNAM, con   especialidad en ortopedia y traumatología  en el Hospital General de México,  con 25 años  de  experiencia laborando en Servicio de Ortopedia y traumatología del Hospital General de Cancún QROO y en mi practica privada, certificado por el consejo mexicano de Ortopedia y Traumatología.',
+    'extra': ['Cedula Profesional 1706877','Cedula de especialista  327158','Consejo Mexicano de Ortopedia y traumatología 23289615','RFCBAGB650322186'],
 }
 
 Main_info = {
@@ -62,7 +64,7 @@ Main_info = {
     'Traumatologist': ['Muscle Seizure','Contusions and ruptures of tendons, ligament damage.']
 }
 
-Gallery = []
+Gallery = ['slide1.jpg','slide2.jpg','slide3.jpeg','slide4.jpeg','slide5.jpg','slide6.jpg','slide7.jpg']
 
 
 @app.route('/')

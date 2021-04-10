@@ -70,9 +70,24 @@
     <div id="secondary_content" >
         <div id="gallery" class="main_bubble">
             <div class="mb_title">{{Section_titles['gallery']}}</div>
+            <div id="slide">
+                {%for image in Gallery%}
+                    <div class="slide_picture">
+                        <img src="static/slideshow/{{image}}" width="100%" height="auto">
+                    </div>
+                {%endfor%}
+            </div>
         </div>
         <div id="doctor_info" class="main_bubble">
             <div class="mb_title">{{Section_titles['doctor_info']}}</div>
+            <h4>Curriculum</h4>
+            <p>{{Doctor_information['curriculum']}}</p>
+            <h4>Aditional</h4>
+            <ul>
+            {%for extra in Doctor_information['extra']%}
+                <li>{{extra}}</li>
+            {%endfor%}
+            </ul> 
         </div>
     </div>
     <div id="foot"></div>
