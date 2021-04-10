@@ -48,14 +48,18 @@
                                 <li><p><strong>Reference: </strong>{{office['reference']}}</p></li>
                             </ul>
                             <h4>Contact</h4>
-                            <p>{{office['telephone']}}</p>
+                            {%for telephone in office['telephone']%}
+                                <p>{{telephone}}</p>
+                            {%endfor%}
                         </div>
                         <div class="available">
                             {%for day in office['available']%}
-                                <div class="day_bubble">
-                                    <p><strong>{{day}}</strong></p>
-                                    <p>{{office['available'][day]}}</p>
-                                </div>
+                                {%if office['available'][day] != 'NA'%}
+                                    <div class="day_bubble">
+                                        <p><strong>{{day}}</strong></p>
+                                        <p>{{office['available'][day]}}</p>
+                                    </div>
+                                {%endif%}
                             {%endfor%}
                         </div>
                     </div>

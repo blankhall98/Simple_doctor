@@ -7,39 +7,37 @@ app.config.secret_key = "xxxxxxxxxx"
 Office = [
     {
         'name': "Hospital Amerimed",
-        'country': 'Mexico',
+        'country': 'México',
         'city': 'Cancún',
-        'adress': 'Av. Tulum sur no.260 Manzanas 4, 5 y 9, 7, 77500 Cancún, Q.R.',
-        'reference': 'Plaza las Américas',
+        'adress': 'AV. BONAMPAK MZA 01 LOTE 1 CONSULTORIO 104 PRIMER PISO  SM6A BENITO JUAREZ  CANCUN QROO',
+        'reference': 'Entre el centro comercial plaza las americas y el conjunto habitacional Malecon',
         'available': {
             'Monday': '16:00-18:00',
-            'Tuesday': 'Not available',
+            'Tuesday': 'NA',
             'Wednesday': '16:00-18:00',
-            'Thursday': 'Not available',
+            'Thursday': '16:00-18:00',
             'Friday': '16:00-18:00',
             'Saturday': '08:00-15:00',
-            'Sunday': 'Not available'
+            'Sunday': 'NA'
         },
-        'telephone': '(044) 998 8454383',
-        'average_cost': '$500'
+        'telephone': ['(044) 9988813408']
     },
     {
-        'name': "Clínica Ortopedista Venado",
-        'country': 'Mexico',
+        'name': "CENTRO QUIROPRACTICO CASSAN",
+        'country': 'México',
         'city': 'Cancún',
-        'adress': 'Av. Tulum sur no.260 Manzanas 4, 5 y 9, 7, 77500 Cancún, Q.R.',
-        'reference': 'Plaza las Américas',
+        'adress': 'CALLE VENADO no. 31 SM 20',
+        'reference': 'Not available',
         'available': {
-            'Monday': 'Not available',
+            'Monday': 'NA',
             'Tuesday': '16:00-18:00',
-            'Wednesday': 'Not available',
-            'Thursday': '16:00-18:00',
-            'Friday': 'Not available',
-            'Saturday': 'Not available',
-            'Sunday': 'Not available'
+            'Wednesday': 'NA',
+            'Thursday': 'NA',
+            'Friday': 'NA',
+            'Saturday': 'NA',
+            'Sunday': 'NA'
         },
-        'telephone': '(044) 998 8454383',
-        'average_cost': '$500'
+        'telephone': ['(044) 998 4891646', '(044) 998 3214400' ] 
     }
 ]
 
